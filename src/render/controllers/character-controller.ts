@@ -19,7 +19,6 @@
  */
 
 import * as THREE from 'three'
-import { Object3D } from 'three'
 import { RAPIER, usePhysics, useRenderSize, useScene } from '../init'
 import { useRenderer } from './../init'
 import { PhysicsObject, addPhysics } from '../physics/physics'
@@ -684,6 +683,7 @@ class CharacterController extends THREE.Mesh {
     } else {
       // * Shoot another ray up to see if we've passed the ground
       ray.dir = UP
+      
       const groundAboveFootHit = physics.castRay(
         ray,
         this.avatar.height / 2,
