@@ -1,10 +1,1 @@
-const InitRapier = async () => {
-  // ! this way of importing the rapier module has not been documented anywhere
-  // ! and it seems like a bug
-  const mod = await import('@dimforge/rapier3d')
-  const RAPIER = await mod.default
-
-  return RAPIER
-}
-
-export default InitRapier
+/**\n * Rapier Physics Engine Initialization\n * \n * This module handles the asynchronous initialization of the Rapier physics engine.\n * Rapier is a WebAssembly-based physics engine that provides high-performance\n * rigid body dynamics and collision detection.\n * \n * The initialization process loads the WebAssembly module and returns the Rapier\n * API object that can be used to create physics worlds, bodies, and colliders.\n */\n\n/**\n * Initialize and load the Rapier physics engine\n * \n * Note: The dynamic import pattern used here is necessary because Rapier\n * is a WebAssembly module that needs to be loaded asynchronously.\n * The double await is required due to how the Rapier module is packaged.\n * \n * @returns Promise<Rapier> - The initialized Rapier physics engine API\n */\nconst InitRapier = async () => {\n  // Dynamic import of the Rapier WebAssembly module\n  // This unusual double-await pattern is required by how Rapier is packaged\n  const mod = await import('@dimforge/rapier3d')\n  const RAPIER = await mod.default\n\n  return RAPIER\n}\n\nexport default InitRapier

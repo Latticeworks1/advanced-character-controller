@@ -1,7 +1,7 @@
 {
-  "name": "three-rust-boilerplate",
+  "name": "advanced-character-controller",
   "version": "3.0.1",
-  "description": "Three.js + Rust boilerplate using Babel and PostCSS and Gsap.",
+  "description": "Advanced Three.js character controller with Rapier physics, first/third-person camera, and comprehensive documentation.",
   "main": "index.js",
   "author": "Arya",
   "license": "MIT",
@@ -13,12 +13,15 @@
     "compile": "wasm-pack build src/wasm/rust --target web"
   },
   "keywords": [
-    "three",
-    "three webpack",
-    "three webpack 5",
-    "three webpack boilerplate",
-    "webpack",
-    "webpack 5"
+    "threejs",
+    "character-controller",
+    "rapier-physics",
+    "first-person",
+    "third-person",
+    "webgl",
+    "physics-simulation",
+    "game-development",
+    "typescript"
   ],
   "devDependencies": {
     "@babel/core": "^7.15.8",
@@ -55,7 +58,7 @@
   },
   "repository": {
     "type": "git",
-    "url": "git@github.com:visionary-studio/three-boilerplate"
+    "url": "git@github.com:Latticeworks1/advanced-character-controller"
   },
   "dependencies": {
     "@babel/runtime": "^7.20.7",
